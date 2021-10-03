@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CSS file -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <title>Pokedex</title>
+</head>
+
+<body class="flex flex-col justify-center items-center min-h-screen w-full bg-red-500 font-commisioner py-5">
+    <!-- Content -->
+    <legend class="block text-white text-4xl pb-5 font-bold">Pokedex</legend>
+    <main class="card max-w-[384px]">
+        <!-- Card header -->
+        <header class="card__header">
+            <img src="img/placeholder.png" alt="Pokemon avatar" class="card__avatar bg-gray-100" id="pokemon-img">
+            <h1 class="card__title" id="pokemon-name">
+                Type a pokemon name or id below!
+                <span class="pokemon-hp text-[17px]" id="pokemon-hp">0<span>HP</span></span>
+            </h1>
+            <span class="card__stat text-[17px] pb-5" id="pokemon-xp">0<span>XP</span></span>
+        </header>
+
+        <!-- Card body -->
+        <section class="card__body border-t-2 border-gray-400 pt-5">
+            <h2 class="card__subtitle">Stats</h2>
+
+            <div class="flex justify-between">
+                <div class="flex-col items-center">
+                    <h3 class="card__subtitle">Attack</h3>
+                    <span id="attack" class="w-full">0</span>
+                </div>
+
+                <div class="flex-col">
+                    <h3 class="card__subtitle">Defense</h3>
+                    <span id="defense" class="w-full">0</span>
+                </div>
+
+                <div class="flex-col">
+                    <h3 class="card__subtitle">Special Attack</h3>
+                    <span id="special-attack" class="w-full">0</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Card ends -->
+
+    <!-- Form -->
+        <form class="card block bg-white w-[90%] max-w-[384px] mt-5 px-6 py-4 rounded-lg" id="form">
+            <!-- Input pokemon name or id -->
+            <input type="text" id="pokemon-input" class="form__input" placeholder="Enter the pokemon id or name">
+            <!-- Text in case of invalid values -->
+            <span class="invalid hidden w-full text-red-700 font-bold text-[16px] text-left">Can't be zero or empty or invalid values</span>
+            <!-- Submit btn -->
+            <input type="submit" id="submit" value="Search Pokemon!" class="px-5 py-3 mt-5 mx-auto border-2 border-transparent cursor-pointer rounded-lg bg-red-500 text-white text-[17px] transition duration-300 hover:bg-white hover:text-red-600 hover:border-red-600">
+        </form>
+    <!-- Form ends-->
+
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
